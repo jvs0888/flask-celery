@@ -1,0 +1,13 @@
+{
+  "app": {
+      "broker_url": "redis://localhost:6379/0",
+      "result_backend": "redis://localhost:6379/0",
+      "broker_connection_retry_on_startup": true,
+      "worker_hijack_root_logger": false
+  },
+  "task": {
+    "bind": true,
+    "name": "worker",
+    "queue": "scraper_queue"
+  }
+}
